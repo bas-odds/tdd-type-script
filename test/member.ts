@@ -9,9 +9,10 @@ export function filterMember(guest: IGuest[]): IGuest[] {
 }
 
 export function findLongestName(guest: IGuest[]): string {
-  const longestName = guest.find((guest) =>
-    Math.max(guest.name.length)
-  )?.name;
+  const maxLength = Math.max(...guest.map((guest) => guest.name.length));
+  const longestName = guest.find((guest) => {
+    return guest.name.length === maxLength;
+  })?.name;
   return longestName || "";
 }
 

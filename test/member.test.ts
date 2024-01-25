@@ -5,18 +5,18 @@ import {
 } from "./member";
 
 const listGuest = [
-  { name: "Angelina Jolie", isMember: true },
   { name: "Eric Jones", isMember: false },
   { name: "Paris Hilton", isMember: true },
   { name: "Kayne West", isMember: false },
+  { name: "Angelina Jolie", isMember: true },
   { name: "Bob Ziroll", isMember: true },
 ];
 
 describe("filterMember", () => {
   test("should return members", () => {
     const expectResult = [
-      { name: "Angelina Jolie", isMember: true },
       { name: "Paris Hilton", isMember: true },
+      { name: "Angelina Jolie", isMember: true },
       { name: "Bob Ziroll", isMember: true },
     ];
 
